@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-
+urls=['','']
 
 @app.route('/')
 def home():
