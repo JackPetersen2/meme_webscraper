@@ -6,7 +6,7 @@ import re
 app = Flask(__name__)
 
 
-urls=['https://mui.com/components/material-icons/']
+urls=['https://www.reddit.com/r/Offensivejokes/']
 
 
 
@@ -17,16 +17,20 @@ def home():
     soup = BeautifulSoup(response.content, 'lxml')
 
 
-    memes = soup.find_all('li', class_='css-cd6vjr')
-    
+    memes = soup.findAll('img',class_='ImageBox-image')
+
     print(soup.prettify())
 
 
     print(memes)
 
+
     return render_template("index.html", memes=memes)
 if __name__ == '__main__':
   app.run()
+
+
+
 
 
 
