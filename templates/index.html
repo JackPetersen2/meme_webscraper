@@ -5,12 +5,17 @@
     <title>Home</title>
 </head>
 <body>
-    {{image}}
+{%for image in images%}
+    <img src="{{image}}">
 
-{%for image in image_container%}
-
-    {{image}}
 {%endfor%}
-    {{memes}}
+{%for video in videos%}
+    <video>
+        <source src="{{video}}">
+    </video>
+    <img src="{{image}}">
+
+{%endfor%}
+    
 </body>
 </html>
